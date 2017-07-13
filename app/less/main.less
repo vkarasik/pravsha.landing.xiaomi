@@ -101,6 +101,7 @@ p{
     font-weight: normal;
 }
 
+
 body{
     font-size: 62.5%;
     font-family: "HelveticaNeueCyr-Roman", Arial, Helvetica, sans-serif;  
@@ -188,7 +189,7 @@ nav{
 .banner{
     padding: 50px 0;
     line-height: 1.2;
-    background: red url('../img/banner-bg.jpg') no-repeat 0 20%;
+    background: url('../img/2.jpg') no-repeat 0 20%;
     
     p{
         font-size: 180%;
@@ -206,4 +207,82 @@ h1{
     }
 }
 
+.price{
+    padding: 40px 0;
+    
+    table{
+        width: 100%;
+        font-size: 160%;
+        font-family: "HelveticaNeueCyr-Medium", sans-serif;
+        
+        tr{
+            &:nth-child(odd){
+                background: #f6f6f6; 
+            }
+        }
+        
+        th{
+            background: #f6f6f6;
+            padding: 25px 0;
+            color: #adadad;
+            border-left: 1px solid #ffffff;
+            text-align: center;
+            
+            &:first-child{
+                border: none;
+                text-align: left;
+                padding-left: 15px;
+            }
+        }
+        
+        td{
+            padding: 20px 0;
+            text-align: center;
+            border-left: 1px solid #ffffff;
+            
+            &:first-child{
+                border: none;
+                text-align: left;
+                padding-left: 15px;
+            }
+        }
+    }
+}
+
+h2{
+    font-family: "HelveticaNeueCyr-Thin", sans-serif;
+    font-size: 360%;
+    color: #3b3b3b;
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.show-all{
+    background: #ff4900;
+    border-radius: 3px;
+    padding: 25px 0;
+    color: #ffffff;
+    text-align: center;
+    font-size: 160%;
+}
+
+.table{
+    display: table;
+    width: 100%;
+        font-size: 160%;
+        font-family: "HelveticaNeueCyr-Medium", sans-serif;
+    .tr{
+        display: table-row;
+         background: #f6f6f6;
+            
+            color: #adadad;
+            border-left: 1px solid #ffffff;
+            text-align: center;
+        
+        .td{
+            display: table-cell;
+            padding: 25px 0;
+        }
+    }
+}
 

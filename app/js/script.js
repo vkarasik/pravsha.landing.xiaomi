@@ -1,10 +1,14 @@
 $(function(){
     
-    //var test = $('tr:gt(4)');
+    var $hideCell = $('.tr:gt(4)');
+    $($hideCell).hide();
     
-    $('.test').hide();
     $('.show-all').click(function(){
-        $('.test').slideDown('slow')
+        
+        var buttonText = $(this);
+        buttonText.text(buttonText.text() == 'Показать все' ? 'Скрыть' : 'Показать все');
+
+        $($hideCell).slideToggle('slow');
         })
         
 });

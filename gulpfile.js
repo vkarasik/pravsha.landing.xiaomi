@@ -105,9 +105,10 @@ gulp.task('clean', function() {
 
 // Отслеживание изменений
 gulp.task('watch', function(){
-    gulp.watch(path.app.less, ['less']);
+    gulp.watch(path.app.less, ['less']); //следим за изменением less и запускаем компилятор
     gulp.watch(path.app.html, ['rigger']);
     gulp.watch(path.app.include, ['rigger']);
+    gulp.watch(path.app.js, ['rigger']); // следим за изменением js
 });
 
 // Дефолтный таск для разработки

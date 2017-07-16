@@ -255,34 +255,103 @@ h2{
     color: #3b3b3b;
     text-align: center;
     margin-bottom: 30px;
+    
+    span{
+        color: #ff4900;    
+    }
 }
 
 .show-all{
     background: #ff4900;
     border-radius: 3px;
-    padding: 25px 0;
+    padding: 20px 0;
     color: #ffffff;
     text-align: center;
     font-size: 160%;
 }
 
-.table{
-    display: table;
+.price-table{
     width: 100%;
-        font-size: 160%;
-        font-family: "HelveticaNeueCyr-Medium", sans-serif;
+    font-size: 160%;
+    margin-bottom: 30px;
+    
     .tr{
-        display: table-row;
-         background: #f6f6f6;
-            
-            color: #adadad;
+        text-align: center;
+        
+        .th{
+            padding: 25px 15px;
             border-left: 1px solid #ffffff;
-            text-align: center;
+            border-bottom: 1px solid #ffffff;
+            font-family: "HelveticaNeueCyr-Medium", sans-serif;
+            color: #adadad;
+            background: #f6f6f6;
+            
+            &:first-child{
+            text-align: left;
+            border-left: none;
+            padding-left: 15px;
+            }
+        }
         
         .td{
-            display: table-cell;
-            padding: 25px 0;
+            padding: 20px 0;
+            text-align: center;
+            border-left: 1px solid #ffffff;
+            
+            &:first-child{
+                border: none;
+                text-align: left;
+                padding-left: 15px;
+            }
+            
+            
         }
+        
+        &:nth-child(odd){
+                background: #f6f6f6;    
+        }
+          
     }
 }
 
+.footnote{
+    display: inline-block;
+    font-size: 140%;
+    margin: 15px 0;
+    padding: 0 10px;
+    color: #8d8d8d
+}
+
+.how-we-work{
+    padding: 40px 0;
+    //background: linear-gradient(to bottom, #fd8a37, #f4580e);
+    background: #ff4900;
+        
+        h2{
+            color: #ffffff;
+        }
+    
+    .step{
+        display: inline-block;
+        text-align: center;
+        
+        p{
+            color: #ffffff;
+            font-size: 160%;
+            line-height: 1.3;
+            margin: 20px 0;
+            
+        }
+
+        
+    }
+}
+
+.problems{
+    padding: 40px 0;
+    background: url('../img/problems_bg.png');
+    
+    h2{
+        margin-bottom: 50px;
+    }
+}

@@ -13,7 +13,7 @@
         <script src="/js/jquery-ui-1.12.1.custom/jquery-ui.js"></script>
         <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
         <script type="text/javascript" src="/js/script.js"></script>
-        <script type="text/javascript" src="/js/piechart.js"></script>
+        <!--<script type="text/javascript" src="/js/piechart.js"></script>-->
         
         <script>
 
@@ -22,189 +22,146 @@
     </head>
     <body>
         <div class="container-fluid">
-            <header>
-                <div class="top-line row">
-                    <div class="logo col-lg-1 col-lg-offset-2">
-                        <img src="img/logo.png" alt="">
-                    </div>
-                    <div class="col-lg-2 col-lg-offset-2">
-                        <div class="callback">
-                        <span class="glyphicon glyphicon-earphone orange" aria-hidden="true"></span>
-                        Обратный звонок   
-                        </div>
-                    </div>
-                    <div class="col-lg-2">
-                        <div class="phone">
-                            +375 (44) 743-62-78
-                        </div>
-                        <div class="location">
-                            Минск, ежедневно с 9:00 до 18:00
-                        </div>
-                    </div> 
+            <header class="row">
+                <div class="logo col-xs-12 col-sm-5 col-md-5 col-md-offset-1">
+                    <img src="img/logo.png" alt="">
                 </div>
-                <nav class="row">
-                    <ul class="col-lg-6 col-lg-offset-3">
-                        <li><a href="#">Сервисный центр</a></li>
-                        <li><a href="#">Услуги</a></li>
-                        <li><a href="#">Модели</a></li>
-                        <li><a href="#">Контакты</a></li>
-                    </ul>    
-                </nav>
+                <div class="col-xs-12 col-sm-4 col-md-3">
+                        <a class="phone" href="tel:+375447436278">+375&nbsp;(44)&nbsp;743-62-78</a>
+                    <span class="location">
+                        Минск, ежедневно с 9:00 до 18:00
+                    </span>
+                </div> 
+                <div class="col-xs-12 col-sm-3 col-md-2">
+                    <button type="button" class="callback">
+                        <span class="glyphicon glyphicon-earphone brand-color" aria-hidden="true"></span>Заказать&nbsp;звонок
+                    </button>
+                </div>
             </header>
-            <div class="banner row">
-                <div class="col-lg-5 col-lg-offset-2">
+            <nav class="row">
+                <ul class="col-xs-12">
+                    <li><a href="#">О нас</a></li>
+                    <li><a href="#">Услуги и цены</a></li>
+                    <li><a href="#">Модели</a></li>
+                    <li><a href="#">Частые проблемы</a></li>
+                    <li><a href="#">Контакты</a></li>
+                </ul>    
+            </nav>
+            <section class="banner row">
+                <div class="col-xs-12 col-md-6 col-md-offset-1">
                     <h1>Фирменный сервисный центр <span>Xiaomi</span> в&nbsp;Минске</h1>
-                    <p>Наш сервисный центр специализируется на ремонте мобильных телефонов Xiaomi. Сертифицированные специалисты способны выполнить ремонт любой сложности в кратчайшие сроки. Благодаря собственному складу запчастей мы может быстро отремонтировать Ваш смартфон, используя только оригинальные запчасти с завода производителя.</p>  
+                    <p>Наш сервисный центр специализируется на ремонте мобильных телефонов Xiaomi. Сертифицированные специалисты способны выполнить ремонт любой сложности в кратчайшие сроки. Благодаря собственному складу запчастей мы может быстро отремонтировать ваш смартфон, используя только оригинальные запчасти с завода производителя.</p>
+                    
+                    <div class="adv">
+                        <img src="img/rumiservice2_time.png" alt="">
+                        <span>Быстрая диагностика при владельце</span>
+                    </div>
+                    <div class="adv">
+                        <img src="img/rumiservice2_certificate.png" alt="">
+                        <span>Только оригинальные запчасти Xiaomi</span>
+                    </div>
+                    <div class="adv">
+                        <img src="img/rumiservice2_guaranty.png" alt="">
+                        <span>Гарантия на выполненные работы от 2-х месяцев</span>
+                    </div>
                 </div>
-            </div>
-            <div class="price row">
-                <div class="col-lg-8 col-lg-offset-2">
-                    <h2>Цены на услуги (работа + запчасти)</h2>
+            </section>
+            <section class="price row">
+                <div class="col-xs-12 col-md-10 col-md-offset-1">
+                    <h2>Цены на услуги (работа&nbsp;+&nbsp;запчасти)</h2>
                 
                     <div class="price-table"> 
                         <div class="row tr">
-                            <div class="th col-lg-6">Наименование услуги</div>
-                            <div class="th col-lg-3">Стоимость*</div>
-                            <div class="th col-lg-3">Время работы</div>
+                            <div class="th col-xs-6">Наименование услуги</div>
+                            <div class="th col-xs-3">Стоимость</div>
+                            <div class="th col-xs-3">Время</div>
                         </div>
                         <div class="row tr">
-                            <div class="col-lg-6 td">Замена стекла дисплея</div>
-                            <div class="col-lg-3 td">от 75 руб.</div>
-                            <div class="col-lg-3 td">от 2 час.</div>
+                            <div class="col-xs-6 td">Замена стекла дисплея</div>
+                            <div class="col-xs-3 td">от 75 руб.</div>
+                            <div class="col-xs-3 td">от 2 час.</div>
                         </div>
                         <div class="row tr">
-                            <div class="col-lg-6 td">Замена аккумулятора</div>
-                            <div class="col-lg-3 td">от 40 руб.</div>
-                            <div class="col-lg-3 td">от 2 час.</div>
+                            <div class="col-xs-6 td">Замена аккумулятора</div>
+                            <div class="col-xs-3 td">от 40 руб.</div>
+                            <div class="col-xs-3 td">от 2 час.</div>
                         </div>
                         <div class="row tr">
-                            <div class="col-lg-6 td">Замена разъема питания</div>
-                            <div class="col-lg-3 td">от 42 руб.</div>
-                            <div class="col-lg-3 td">от 2 час</div>
+                            <div class="col-xs-6 td">Замена разъема питания</div>
+                            <div class="col-xs-3 td">от 42 руб.</div>
+                            <div class="col-xs-3 td">от 2 час</div>
                         </div>
                         <div class="row tr">
-                            <div class="col-lg-6 td">Замена разъема наушников</div>
-                            <div class="col-lg-3 td">от 42 руб.</div>
-                            <div class="col-lg-3 td">от 2 час.</div>
+                            <div class="col-xs-6 td">Замена разъема наушников</div>
+                            <div class="col-xs-3 td">от 42 руб.</div>
+                            <div class="col-xs-3 td">от 2 час.</div>
                         </div>
                         <div class="row tr">
-                            <div class="col-lg-6 td">Ремонт слухового динамика</div>
-                            <div class="col-lg-3 td">от 35 руб.</div>
-                            <div class="col-lg-3 td">от 2 час.</div>
+                            <div class="col-xs-6 td">Ремонт слухового динамика</div>
+                            <div class="col-xs-3 td">от 35 руб.</div>
+                            <div class="col-xs-3 td">от 2 час.</div>
                         </div>
                         <div class="row tr">
-                            <div class="col-lg-6 td">Замена динамика звонка</div>
-                            <div class="col-lg-3 td">от 35 руб.</div>
-                            <div class="col-lg-3 td">от 2 час.</div>
+                            <div class="col-xs-6 td">Замена динамика звонка</div>
+                            <div class="col-xs-3 td">от 35 руб.</div>
+                            <div class="col-xs-3 td">от 2 час.</div>
                         </div>
                         <div class="row tr">
-                            <div class="col-lg-6 td">Замена кнопки включения</div>
-                            <div class="col-lg-3 td">от 40 руб.</div>
-                            <div class="col-lg-3 td">от 2 час.</div>
+                            <div class="col-xs-6 td">Замена кнопки включения</div>
+                            <div class="col-xs-3 td">от 40 руб.</div>
+                            <div class="col-xs-3 td">от 2 час.</div>
                         </div>
                         <div class="row tr">
-                            <div class="col-lg-6 td">Замена микрофона</div>
-                            <div class="col-lg-3 td">от 35 руб.</div>
-                            <div class="col-lg-3 td">от 2 час.</div>
+                            <div class="col-xs-6 td">Замена микрофона</div>
+                            <div class="col-xs-3 td">от 35 руб.</div>
+                            <div class="col-xs-3 td">от 2 час.</div>
                         </div>
                         <div class="row tr">
-                            <div class="col-lg-6 td">Замена/ремонт корпуса</div>
-                            <div class="col-lg-3 td">от 40 руб.</div>
-                            <div class="col-lg-3 td">от 2 час.</div>
+                            <div class="col-xs-6 td">Замена/ремонт корпуса</div>
+                            <div class="col-xs-3 td">от 40 руб.</div>
+                            <div class="col-xs-3 td">от 2 час.</div>
                         </div>
                         <div class="row tr">
-                            <div class="col-lg-6 td">Замена камеры фронтальной/основной</div>
-                            <div class="col-lg-3 td">от 40 руб.</div>
-                            <div class="col-lg-3 td">от 2 час.</div>
+                            <div class="col-xs-6 td">Замена камеры фронтальной/основной</div>
+                            <div class="col-xs-3 td">от 40 руб.</div>
+                            <div class="col-xs-3 td">от 2 час.</div>
                         </div>
                         <div class="row tr">
-                            <div class="col-lg-6 td">Прошивка</div>
-                            <div class="col-lg-3 td">от 35 руб.</div>
-                            <div class="col-lg-3 td">от 2 час.</div>
+                            <div class="col-xs-6 td">Прошивка</div>
+                            <div class="col-xs-3 td">от 35 руб.</div>
+                            <div class="col-xs-3 td">от 2 час.</div>
                         </div>
                         <div class="row tr">
-                            <div class="col-lg-6 td">Подбор графического ключа </div>
-                            <div class="col-lg-3 td">от 45 руб.</div>
-                            <div class="col-lg-3 td">от 2 час.</div>
+                            <div class="col-xs-6 td">Подбор графического ключа </div>
+                            <div class="col-xs-3 td">от 45 руб.</div>
+                            <div class="col-xs-3 td">от 2 час.</div>
                         </div>
                         <div class="row tr">
-                            <div class="col-lg-6 td">Сохранение данных/контактов</div>
-                            <div class="col-lg-3 td">от 35 руб.</div>
-                            <div class="col-lg-3 td">от 2 час.</div>
+                            <div class="col-xs-6 td">Сохранение данных/контактов</div>
+                            <div class="col-xs-3 td">от 35 руб.</div>
+                            <div class="col-xs-3 td">от 2 час.</div>
                         </div>
                         <div class="row tr">
-                            <div class="col-lg-6 td">Замена датчика приближения</div>
-                            <div class="col-lg-3 td">от 32 руб.</div>
-                            <div class="col-lg-3 td">от 2 час.</div>
+                            <div class="col-xs-6 td">Замена датчика приближения</div>
+                            <div class="col-xs-3 td">от 32 руб.</div>
+                            <div class="col-xs-3 td">от 2 час.</div>
                         </div>
                         <div class="row tr">
-                            <div class="col-lg-6 td">Замена задней крышки</div>
-                            <div class="col-lg-3 td">от 45 руб.</div>
-                            <div class="col-lg-3 td">от 2 час.</div>
+                            <div class="col-xs-6 td">Замена задней крышки</div>
+                            <div class="col-xs-3 td">от 45 руб.</div>
+                            <div class="col-xs-3 td">от 2 час.</div>
                         </div>
                         <div class="row tr">
-                            <div class="col-lg-6 td">Ремонт кнопок громкости</div>
-                            <div class="col-lg-3 td">от 39 руб.</div>
-                            <div class="col-lg-3 td">от 2 час.</div>
+                            <div class="col-xs-6 td">Ремонт кнопок громкости</div>
+                            <div class="col-xs-3 td">от 39 руб.</div>
+                            <div class="col-xs-3 td">от 2 час.</div>
                         </div>
                     </div><!-- /table -->
                       
                     <div class="show-all">Показать все</div> 
-                    <span class="footnote">* Точную стоимость работы с учетом запасной части и ее наличие на складе уточняйте по телефону</span>
-            </div>
-            </div>
-            <div class="service row">
-                <div class="col-lg-8 col-lg-offset-2">
-                    <h2>Нужен надежный сервисный центр?</h2>
-                    <p>Мы гарантируем вам быстрое и качественное выполнение ремонта любой сложности. Наши специалисты способны «вернуть к жизни» даже самый безнадежно сломанный телефон. Если вы уже получили несколько отказов в ремонте смартфона Xiaomi в других сервисах, мы готовы взяться за работу!</p>
-                    <div class="slider">
-                        <div class="slide">
-                            <img src="img/cell-phone-repair.jpg" alt="">
-                            <h3>Официальная гарантия</h3>
-                            <p>Мы даем гарантию, как на выполненную нами работу, так и на запчасти и комплектующие.</p>
-                        </div>
-                        <div class="slide">
-                            <img src="img/cell-phone-repair.jpg" alt="">
-                            <h3>Запчасти ко всем популярным моделям</h3>
-                            <p>Мы поддерживаем самый большой ассортимент запчастей для телефонов Xiaomi, если какой-то детали не оказалось на нашем складе, мы в кратчайшие сроки привезем ее под заказ. </p>
-                        </div>
-                        <div class="slide">
-                            <img src="img/cell-phone-repair.jpg" alt="">
-                            <h3>Быстро и качественно</h3>
-                            <p>Мы выполняем все работы по ремонту телефонов Xiaomi в кратчайшие сроки. Все наши специалисты сертифицированные инженеры, поэтому мы гарантируем высочайшее качество проведённых работ.</p>
-                        </div>
-                    </div>
-                </div>    
-            </div>
-            <div class="how-we-work row">
-                <div class="col-lg-10 col-lg-offset-1">
-                    <h2>Как мы работаем</h2>
-                    <div class="row">
-                        <div class="step col-lg-3">
-                            <img src="img/start1.png" alt="">
-                            <p>Оставьте заявку, позвоните или приходите в сервисный центр</p>
-                        </div>
-                        <div class="step col-lg-3">
-                            <img src="img/diagnosis1.png" alt="">
-                            <p>Мы cделаем бесплатную диагностику, после которой сообщим сроки и цену ремонта</p>
-                        </div>
-                        <div class="step col-lg-3">
-                            <img src="img/repair1.png" alt="">
-                            <p>С вашего согласия проведем ремонт или замену компонентов</p>
-                        </div>
-                        <div class="step col-lg-3">
-                            <img src="img/finish1.png" alt="">
-                            <p>Вы забираете готовый аппарат из ремонта</p>
-                        </div>
-                    </div>
+                    <span class="footnote">* Точную стоимость с учетом запасной части, и время работы уточняйте по телефону</span>
                 </div>
-            </div>
-            <div class="problems row">
-                <div class="col-lg-8 col-lg-offset-2">
-                    <h2>Самые частые проблемы с телефонами Xiaomi</h2>
-                    <div id="piechart" style="width: 100%; height: 350px;"></div>
-                </div>
-            </div>
+            </section>
             <div class="models row">
                 <div class="col-lg-8 col-lg-offset-2">
                     <h2>Мы ремонтируем любые модели телефонов <span>Xiaomi</span></h2>
@@ -213,59 +170,13 @@
                         <span class="label">Серия:</span>
                         <span id="mi">Mi</span>
                         <span id="redmi">Redmi</span>
-                        <span id="redmi-note">Redmi Note</span>
+                        <span id="redminote">Redmi Note</span>
                         <span id="hongmi">Hongmi</span>
                     </div>
                     
                     <div class="series">
-                       <span class="label">Модель:</span>
+                       <p class="label">Модель:</p>
                     </div>
-                       
-                    <!-- <div class="series">
-                       
-                       <span>Mi Max</span>
-                        <span>Mi5 High</span>
-                        <span>Mi 4s</span>
-                        <span>Mi 5 Pro</span>
-                        <span>MiPad 2</span>
-                        <span>Mi4c</span>
-                        <span>Mi4i</span>
-                        <span>Mi Note Pro</span>
-                        <span>Mi Note</span>
-                        <span>Mi4 LTE</span>
-                        <span>Mi 6</span>
-                        <span>Mi 5c</span>
-                        <span>Mi Note 2</span>
-                        <span>Mi Max Prime</span>
-                        <span>Mi 5s Plus</span>
-                        <span>Mi 5s</span>
-                       
-                       
-                        <span>Redmi 3S</span>
-                        <span>Redmi 3X</span>
-                        <span>Redmi Pro</span>
-                        <span>Redmi 3S Pro</span>
-                        <span>Redmi 4 SE</span>
-                        <span>Redmi 4 HE</span>
-                        <span>Redmi 4A</span>
-                        <span>Redmi 2A</span>
-                        <span>Redmi 2 Prime</span>
-                        <span>Redmi Note 2</span>
-                        <span>Redmi 2 Pro</span>
-                        <span>Redmi 3</span>
-                    </div>
-                    <div class="series">
-                        <span>Redmi Note 3</span>
-                        <span>Redmi Note 2 Prime</span>
-                        <span>Redmi Note 4G Dual SIM</span>
-                        <span>Redmi Note 4</span>
-                        <span>Redmi Note 4х</span>
-                    </div>
-                    <div class="series">
-                        <span>Hongmi 2</span>
-                        <span>Hongmi 1S 4G</span>
-                        <span>Hongmi 1S 3G</span>
-                    </div> -->
                     
                     <div class="model">
                         <img src="img/mi_max2-120x142.jpg" alt="">
@@ -275,27 +186,8 @@
                         <img src="img/mi_max2-120x142.jpg" alt="">
                         <p>Mi Max</p>
                     </div>
-            
                 </div>    
             </div>
-            <footer class="row">
-                <div class="col-lg-3 col-lg-offset-2">
-                    <h2>Контактная информация</h2>
-                    <div class="address">
-                        <span>Минск, пр-т Независимости 40 (вход со двора)</span>
-                        <span>Режим работы: Пн-Пт с 9:00 до 18:00</span>
-                        <span>Телефон: +375 (29) 319-18-75</span>
-                    </div>
-                    <form action="">
-                        <input type="text" class="name" placeholder="Ваше имя">
-                        <input type="text" class="phone-num" placeholder="Номер телефона">  
-                        <button type="button" class="send">
-                            <span class="glyphicon glyphicon-send" aria-hidden="true"></span>
-                            Заказать звонок
-                        </button>
-                    </form>
-                </div>
-            </footer>
         </div>
     </body>
 </html>

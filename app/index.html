@@ -13,30 +13,26 @@
         <script src="/js/jquery-ui-1.12.1.custom/jquery-ui.js"></script>
         <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
         <script type="text/javascript" src="/js/script.js"></script>
-        <!--<script type="text/javascript" src="/js/piechart.js"></script>-->
-        
-        <script>
-
-        </script>
+        <script type="text/javascript" src="/js/piechart.js"></script>
 
     </head>
     <body>
         <div class="container-fluid">
             <header class="row">
-                <div class="logo col-xs-12 col-sm-5 col-md-5 col-md-offset-1">
+                <div class="logo col-xs-12 col-sm-5 col-md-5 col-md-offset-1 col-lg-4 col-lg-offset-2">
                     <img src="img/logo.png" alt="">
                 </div>
-                <div class="col-xs-12 col-sm-4 col-md-3">
+                <div class="col-xs-12 col-sm-4 col-md-3 col-lg-2">
                         <a class="phone" href="tel:+375447436278">+375&nbsp;(44)&nbsp;743-62-78</a>
                     <span class="location">
                         Минск, ежедневно с 9:00 до 18:00
                     </span>
                 </div> 
-                <div class="col-xs-12 col-sm-3 col-md-2">
+                <div class="col-xs-12 col-sm-3 col-md-2 col-lg-2">
                     <button type="button" class="callback">
-                        <span class="glyphicon glyphicon-earphone brand-color" aria-hidden="true"></span>Заказать&nbsp;звонок
+                        <span class="glyphicon glyphicon-earphone brand-color" aria-hidden="true"></span>Заказать звонок
                     </button>
-                </div>
+                </div>   
             </header>
             <nav class="row">
                 <ul class="col-xs-12">
@@ -48,26 +44,91 @@
                 </ul>    
             </nav>
             <section class="banner row">
-                <div class="col-xs-12 col-md-6 col-md-offset-1">
+                <div class="col-xs-12 col-md-6 col-md-offset-1 col-lg-5 col-lg-offset-2">
                     <h1>Фирменный сервисный центр <span>Xiaomi</span> в&nbsp;Минске</h1>
                     <p>Наш сервисный центр специализируется на ремонте мобильных телефонов Xiaomi. Сертифицированные специалисты способны выполнить ремонт любой сложности в кратчайшие сроки. Благодаря собственному складу запчастей мы может быстро отремонтировать ваш смартфон, используя только оригинальные запчасти с завода производителя.</p>
+                </div>
+            </section>
+            <section class="b-service row">
+                <div class="col-xs-12 col-md-6 col-md-offset-1 col-lg-8 col-lg-offset-2">
+                    <h2>Нужен надежный сервисный центр?</h2>
+                    <p>Мы гарантируем вам быстрое и качественное выполнение ремонта любой сложности. Наши специалисты способны «вернуть к жизни» даже самый безнадежно сломанный телефон. Если вы уже получили несколько отказов в ремонте смартфона Xiaomi в других сервисах, мы готовы взяться за работу!</p>
+                    <div class="service row">
+                        <div class="item warranty col-xs-12 col-lg-4">
+                            <h3>Официальная гарантия до&nbsp;2-х месяцев</h3>
+                            <p>Мы даем гарантию, как на выполненную нами работу, так и на запчасти и комплектующие.</p>
+                        </div>
+                        <div class="item spare col-xs-12 col-lg-4">
+                            <h3>Оригинальные запчасти ко&nbsp;всем популярным моделям</h3>
+                            <p>Мы поддерживаем самый большой ассортимент запчастей для телефонов Xiaomi, если какой-то детали не оказалось на нашем складе, мы в кратчайшие сроки привезем ее под заказ.</p>
+                        </div>
+                        <div class="item speed col-xs-12 col-lg-4">
+                            <h3>Быстрая диагностика и&nbsp;качественный ремонт</h3>
+                            <p>Мы выполняем все работы по ремонту телефонов Xiaomi в кратчайшие сроки. Все наши специалисты сертифицированные инженеры, поэтому мы гарантируем высочайшее качество проведённых работ.</p>
+                        </div>
+                    </div>
+                </div>    
+            </section>
+            <div class="b-models row">
+                <div class="col-xs-12 col-sm-12 col-md-10 col-md-offset-1 col-lg-8 col-lg-offset-2">
+                    <h2>Мы ремонтируем любые модели телефонов <span>Xiaomi</span></h2>
+                    <div class="wrap-filter">
+                        <div class="series-filter">
+                            <p class="sign">Серия:</p>
+                            <span id="mi">Mi</span>
+                            <span id="redmi">Redmi</span>
+                            <span id="redminote">Redmi Note</span>
+                            <span id="hongmi">Hongmi</span>
+                        </div>
                     
-                    <div class="adv">
-                        <img src="img/rumiservice2_time.png" alt="">
-                        <span>Быстрая диагностика при владельце</span>
+                        <div class="models">
+                           <p class="sign">Модель:</p>
+                        </div>    
                     </div>
-                    <div class="adv">
-                        <img src="img/rumiservice2_certificate.png" alt="">
-                        <span>Только оригинальные запчасти Xiaomi</span>
+                    <div class="models-pic">
+                       <div class="model-pic-item">
+                            <img src="img/mi_max2-120x142.jpg" alt="">
+                            <p>Mi Max</p>
                     </div>
-                    <div class="adv">
-                        <img src="img/rumiservice2_guaranty.png" alt="">
-                        <span>Гарантия на выполненные работы от 2-х месяцев</span>
+                    <div class="model-pic-item">
+                        <img src="img/mi_max2-120x142.jpg" alt="">
+                        <p>Mi Max</p>
+                    </div>
+                        
+                    </div>
+                </div>    
+            </div>
+            <section class="how-we-work row">
+                <div class="col-xs-12 col-lg-10 col-lg-offset-1">
+                    <h2>Как мы работаем</h2>
+                    <div class="row">
+                        <div class="step col-xs-12 col-sm-6 col-lg-3">
+                            <img src="img/start1.png" alt="">
+                            <p>Оставьте заявку, позвоните или приходите в&nbsp;сервисный центр</p>
+                        </div>
+                        <div class="step col-xs-12 col-sm-6 col-lg-3">
+                            <img src="img/diagnosis1.png" alt="">
+                            <p>Мы cделаем бесплатную диагностику, после которой сообщим сроки и&nbsp;цену ремонта</p>
+                        </div>
+                        <div class="step col-xs-12 col-sm-6 col-lg-3">
+                            <img src="img/repair1.png" alt="">
+                            <p>С вашего согласия проведем ремонт или замену компонентов</p>
+                        </div>
+                        <div class="step col-xs-12 col-sm-6 col-lg-3">
+                            <img src="img/finish1.png" alt="">
+                            <p>Вы забираете готовый аппарат из&nbsp;ремонта</p>
+                        </div>
                     </div>
                 </div>
             </section>
+            <section class="problems row">
+                <div class="col-xs-12 col-md-8 col-md-offset-2">
+                    <h2>Частые проблемы с&nbsp;телефонами <span>Xiaomi</span></h2>
+                    <div id="piechart" style="width: 100%; height: 350px;"></div>
+                </div>
+            </section>
             <section class="price row">
-                <div class="col-xs-12 col-md-10 col-md-offset-1">
+                <div class="col-xs-12 col-md-10 col-md-offset-1 col-lg-8 col-lg-offset-2">
                     <h2>Цены на услуги (работа&nbsp;+&nbsp;запчасти)</h2>
                 
                     <div class="price-table"> 
@@ -162,32 +223,38 @@
                     <span class="footnote">* Точную стоимость с учетом запасной части, и время работы уточняйте по телефону</span>
                 </div>
             </section>
-            <div class="models row">
-                <div class="col-lg-8 col-lg-offset-2">
-                    <h2>Мы ремонтируем любые модели телефонов <span>Xiaomi</span></h2>
-                    
-                    <div class="series-filter">
-                        <span class="label">Серия:</span>
-                        <span id="mi">Mi</span>
-                        <span id="redmi">Redmi</span>
-                        <span id="redminote">Redmi Note</span>
-                        <span id="hongmi">Hongmi</span>
+            <footer class="row">
+                <div class="col-xs-12 col-sm-8 col-md-8 col-md-offset-1 col-lg-8 col-lg-offset-2">
+                    <h2>Контактная информация</h2>
+                    <div class="contacts">
+                        <span>Минск, пр-т Независимости&nbsp;40 (вход&nbsp;со&nbsp;двора)</span> 
+                        <span>Режим работы: Пн-Пт с&nbsp;9:00&nbsp;до&nbsp;18:00</span>
+                        <span>Телефон: +375&nbsp;(29)&nbsp;319-18-75</span>
                     </div>
-                    
-                    <div class="series">
-                       <p class="label">Модель:</p>
-                    </div>
-                    
-                    <div class="model">
-                        <img src="img/mi_max2-120x142.jpg" alt="">
-                        <p>Mi Max</p>
-                    </div>
-                    <div class="model">
-                        <img src="img/mi_max2-120x142.jpg" alt="">
-                        <p>Mi Max</p>
-                    </div>
-                </div>    
+                    <form class="form" method="post" action="mail.php">
+                        <input type="text" class="name" name="name" placeholder="Ваше имя" required>
+                        <input type="text" class="tel" name="tel" placeholder="Номер телефона" required>  
+                        <button type="submit" class="send">
+                            <span class="glyphicon glyphicon-send" aria-hidden="true"></span>
+                            Заказать звонок
+                        </button>
+                    </form>
+                </div>
+            </footer>
+            <section class="map">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d4700.7031644080735!2d27.573006722925058!3d53.90772805786791!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xb44c62fa07e7da68!2z0KHQtdGA0LLQuNGB0L3Ri9C5INGG0LXQvdGC0YAg0J_RgNCw0LLRiNCw!5e0!3m2!1sru!2sru!4v1500367234371" width="100%" height="350" frameborder="0" style="border:0" allowfullscreen></iframe> 
+            </section>
+            <div class="modal-form">
+                <form class="form" method="post" action="mail.php">
+                    <input type="text" class="name" name="name" placeholder="Ваше имя" required>
+                    <input type="text" class="tel" name="tel" placeholder="Номер телефона" required>  
+                    <button type="submit" class="send">
+                        <span class="glyphicon glyphicon-send" aria-hidden="true"></span>
+                        Заказать звонок
+                    </button>
+                </form>
             </div>
+            <div class="overlay"></div>
         </div>
     </body>
 </html>

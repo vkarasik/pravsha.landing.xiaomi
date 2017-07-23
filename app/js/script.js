@@ -42,8 +42,7 @@ $(function(){
             'Redmi 4A',
             'Redmi 2A',
             'Redmi 2 Prime',
-            'Redmi Note 2',
-            'Redmi 2 Pro'
+            'Redmi Note 2'
             ]; // Модели из серии redmi
     
     var redminote = ['Redmi Note 2 Prime',
@@ -56,8 +55,6 @@ $(function(){
     $('.models').hide();
 
     $('#mi,#redmi,#redminote,#hongmi').click(function(el){
-        
-        console.log(el);
         
         var filterID = $(this).attr('id');
         var modelsArr = eval(filterID); // получим ссылку на массив моделей текущего отбора
@@ -77,17 +74,17 @@ $(function(){
 }); // Фильтр моделей
 
 $(function(){
-    $('.name').focusin(function(){
+    $('.name, .tel').focusin(function(){
+        var placeholder = $(this).attr('data-placeholder');
         $(this).attr('placeholder', '');
+        $(this).focusout(function(){
+            if($(this).val() == ''){
+                $(this).attr('placeholder', placeholder);    
+            }
+        });
     });
-    
-    $('.name').focusout(function(){
-        if($(this).val() == ''){
-        $(this).attr('placeholder', 'Ваше имя');    
-        }
-    });
-    
-    $('.class').submit(function(e){
+
+    $('.form').submit(function(e){
         e.preventDefault();// Отмена перезагрузки страницы при submit
         var $form = $(this);
         $.ajax({
@@ -95,32 +92,34 @@ $(function(){
             url: $form.attr('action'),
             data: $form.serialize(),
             success: function(response){
-                
+                $('.form input').slideUp();
+                $('form .callback').css({background: '#4caf50'}).text('Заявка принята!');
             },
             error: function(response){
-                
+                alert('Произошла ошибка! Пожалуйста повторите отправку!');  
             }
         });
     });
 }); // Форма обратной связи
 
 $(function(){
-  $('.callback').click(function(e){
+    $('#callback').click(function(e){
       e.preventDefault();
-      console.log('1');
       $('.modal-form').fadeIn();
       $('.overlay').fadeIn().click(function(){
           $(this).fadeOut();
           $('.modal-form').fadeOut();
       });
-  }); 
-});
+    }); 
+}); // всплывающее окно для формы
 
 $(function(){
-    $('nav a').click(function(){
-        var test = $(this).scrollTop();
-        $('html,body').scrollTop()
+    $('a[href^="#"]').click(function(){
+        var $linkHref = $(this).attr("href");
+        var $ancorName = $('a[name="' + $linkHref.slice(1) + '"]');
+        var ancorPosition = $ancorName.offset();
+        $('body, html').animate({scrollTop: ancorPosition.top}, 500); 
     })
-});
+}); // Плавный скролинг к якорю
 
 //https://www.one-tab.com/page/Th5VYoRGSsmrGd6_AX0p4A

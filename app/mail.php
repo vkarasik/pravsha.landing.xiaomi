@@ -11,6 +11,6 @@ if( ! empty($_POST) ) {
 
     mail($to, $subject, $message, $headers);
 
-    echo ('Ваш запрос отправлен!');
+    //echo ('Ваш запрос отправлен!');
 } 
 ?>

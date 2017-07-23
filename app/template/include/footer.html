@@ -1,4 +1,5 @@
 <footer class="row">
+    <a name="footer"></a>
     <div class="col-xs-12 col-sm-8 col-md-8 col-md-offset-1 col-lg-8 col-lg-offset-2">
         <h2>Контактная информация</h2>
         <div class="contacts">
@@ -7,26 +8,26 @@
             <span>Телефон: +375&nbsp;(29)&nbsp;319-18-75</span>
         </div>
         <form class="form" method="post" action="mail.php">
-            <input type="text" class="name" name="name" placeholder="Ваше имя" required>
-            <input type="text" class="tel" name="tel" placeholder="Номер телефона" required>  
-            <button type="submit" class="send">
+            <input type="text" class="name" name="name" placeholder="Ваше имя" data-placeholder="Ваше имя" required>
+            <input type="text" class="tel" name="tel" placeholder="Номер телефона" data-placeholder="Номер телефона" required>
+            <button type="submit" class="callback">
                 <span class="glyphicon glyphicon-send" aria-hidden="true"></span>
-                Заказать звонок
+                <span class="button-text">Заказать звонок</span>
             </button>
         </form>
     </div>
-</footer>
-<section class="map">
-    <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d4700.7031644080735!2d27.573006722925058!3d53.90772805786791!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xb44c62fa07e7da68!2z0KHQtdGA0LLQuNGB0L3Ri9C5INGG0LXQvdGC0YAg0J_RgNCw0LLRiNCw!5e0!3m2!1sru!2sru!4v1500367234371" width="100%" height="350" frameborder="0" style="border:0" allowfullscreen></iframe> 
-</section>
-<div class="modal-form">
+    <div class="modal-form">
     <form class="form" method="post" action="mail.php">
-        <input type="text" class="name" name="name" placeholder="Ваше имя" required>
-        <input type="text" class="tel" name="tel" placeholder="Номер телефона" required>  
-        <button type="submit" class="send">
+        <input type="text" class="name" name="name" placeholder="Ваше имя" data-placeholder="Ваше имя" required>
+        <input type="text" class="tel" name="tel" placeholder="Номер телефона" data-placeholder="Номер телефона" required>  
+        <button type="submit" class="callback">
             <span class="glyphicon glyphicon-send" aria-hidden="true"></span>
-            Заказать звонок
+            <span class="button-text">Заказать звонок</span>
         </button>
     </form>
 </div>
 <div class="overlay"></div>
+</footer>
+<section class="map">
+    <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d4700.7031644080735!2d27.573006722925058!3d53.90772805786791!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xb44c62fa07e7da68!2z0KHQtdGA0LLQuNGB0L3Ri9C5INGG0LXQvdGC0YAg0J_RgNCw0LLRiNCw!5e0!3m2!1sru!2sru!4v1500367234371" width="100%" height="350" frameborder="0" style="border:0" allowfullscreen></iframe> 
+</section>

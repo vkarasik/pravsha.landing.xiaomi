@@ -26,7 +26,7 @@ var path = {
     app: { //Директория для разработки
         html: 'app/template/*.html',
         include: 'app/template/include/*.html',
-        js: 'app/js/*.js',
+        js: 'app/js/**/*.js',
         less: 'app/less/*.less',
         css: 'app/css/*.css',
         img: 'app/img/**/*.*',
@@ -42,7 +42,7 @@ gulp.task('browserSync', function() {
       baseDir: 'app'
     },
     
-    tunnel: true,
+    tunnel: false,
     host: 'localhost',
     port: 3000,
     logPrefix: "karasik"  
@@ -56,6 +56,7 @@ gulp.task('less', function () {
     .pipe(less())
     .pipe(autoprefixer({browsers: ['> 1%', 'IE 7'], cascade: true}))
 	.pipe(sourcemaps.write()) // карта кода
+    .pipe(rename({ suffix: '.min'}))
 	.pipe(gulp.dest('app/css'))
 	.pipe(reload({stream: true})) //Перезагрузим сервер для обновлений
     .pipe(notify({ message: 'Изменен <%= file.relative %>' }));
@@ -74,9 +75,16 @@ gulp.task('rigger', function () {
 gulp.task('cleanCSS', function() {
   return gulp.src(path.app.css)
     .pipe(cleanCSS({compatibility: 'ie8'}))
-    .pipe(rename({ suffix: '.min'}))
+    //.pipe(rename({ suffix: '.min'}))
     .pipe(gulp.dest(path.dist.css))
     .pipe(reload({stream: true}));
+});
+
+// Объедениение стилей в один
+gulp.task('useref', function () {
+    return gulp.src('app/*.html')
+        .pipe(useref())
+        .pipe(gulp.dest(path.dist.html));
 });
 
 // сжатие изображений
@@ -98,6 +106,12 @@ gulp.task('html', function() {
     .pipe(gulp.dest(path.dist.html))
 });
 
+// копирование js
+gulp.task('js', function() {
+    gulp.src(path.app.js)
+    .pipe(gulp.dest(path.dist.js))
+});
+
 // очистка
 gulp.task('clean', function() {
   del(path.clean);
@@ -115,7 +129,7 @@ gulp.task('watch', function(){
 gulp.task('default', ['browserSync', 'less', 'rigger', 'watch']);
 
 // Сборка проекта
-gulp.task('build', ['cleanCSS', 'imagemin', 'fonts', 'html']);
+gulp.task('build', ['cleanCSS', 'imagemin', 'fonts', 'js', 'html']);
 
 
 

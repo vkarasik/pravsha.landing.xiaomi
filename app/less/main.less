@@ -102,10 +102,50 @@ p{
 }
 
 @brand-color: #ff4900;
+@text-color: #3b3b3b;
 
 body{
     font-size: 62.5%;
-    font-family: "HelveticaNeueCyr-Roman", Arial, Helvetica, sans-serif;  
+    font-family: "HelveticaNeueCyr-Roman", Arial, Helvetica, sans-serif;
+    color: @text-color;
+}
+
+h1{
+    font-family: "HelveticaNeueCyr-Thin", sans-serif;
+    font-size: 500%;
+    line-height: 1.1;
+    color: @text-color;
+    margin-bottom: 20px;
+
+    @media(max-width: 768px){
+        font-size: 400%;
+    }
+
+    span{color: @brand-color;}
+}
+
+h2{
+    font-family: "HelveticaNeueCyr-Thin", sans-serif;
+    font-size: 360%;
+    line-height: 1.1;
+    color: @text-color;
+    text-align: center;
+    margin-bottom: 30px;
+    
+    @media(max-width: 768px){font-size: 300%;}
+    
+    span{color: @brand-color;}
+}
+
+h3{
+    font-size: 250%;
+    font-family: "HelveticaNeueCyr-Light", sans-serif;
+    color: @brand-color;
+    margin-bottom: 5px;
+
+    @media(max-width: 768px){
+            font-size: 200%;
+        }
 }
 
 header{
@@ -115,28 +155,6 @@ header{
         @media(max-width: 768px){
              margin-bottom: 15px;    
         }
-    }
-
-    .callback{
-        display: block;
-        padding: 15px 5px;
-        border: 1px solid #dfdfdf;
-        border-radius: 3px;
-        font-size: 150%;
-        color: #818181;
-        vertical-align: top;
-        background: transparent;
-        width: 100%;
-        
-        &:hover{
-            background-color: #fafafa;
-            border-color: #d6d6d6;
-            cursor: pointer;
-        }
-        
-        span{margin-right: 5px;}
-        
-        .brand-color{color: @brand-color;}
     }
     
     .phone{
@@ -155,7 +173,8 @@ header{
     .location{
         display: block;
         font-size: 140%;
-        color: #818181;
+        //color: #818181;
+        color: @text-color + 50%;
         margin-top: 5px;
         text-align: center;
     }  
@@ -185,7 +204,7 @@ nav{
             }
             
             a{
-                color: #3b3b3b;
+                color: @text-color;
                 font-size: 160%;
                 font-family: "HelveticaNeueCyr-Medium", sans-serif;
                 text-decoration: none;
@@ -196,8 +215,7 @@ nav{
                 }
                 &:hover{
                     color: @brand-color;
-                }
-                
+                } 
             }
             
             &:first-child{
@@ -210,22 +228,9 @@ nav{
     }
 }
 
-.banner{
+.b-banner{
     padding: 40px 0 70px;
-    background: url('../img/2.jpg') no-repeat;
-    
-    h1{
-        font-family: "HelveticaNeueCyr-Thin", sans-serif;
-        font-size: 500%;
-        line-height: 1.1;
-        margin-bottom: 20px;
-        
-        @media(max-width: 768px){
-            font-size: 400%;
-        }
-    
-        span{color: @brand-color;}
-    }
+    background: url('../img/banner_bg.jpg') no-repeat;
     
     p{
         font-size: 180%;
@@ -236,24 +241,9 @@ nav{
             font-size: 160%;
         }
     }
-    
-    .adv{
-        font-size: 180%;
-        margin-top: 7px;
-        
-        @media(max-width: 768px){
-            font-size: 160%;
-        }
-        
-        span{
-            vertical-align: top;
-            line-height: 2;
-            margin-left: 10px;
-        }
-    }
 }
 
-.price{
+.b-price{
     padding: 40px 0;
     
     .price-table{
@@ -285,6 +275,7 @@ nav{
             .td{
                 padding: 20px 0;
                 border-left: 1px solid #ffffff;
+                color: @text-color;
 
                 &:first-child{
                     border: none;
@@ -308,35 +299,42 @@ nav{
     }
 }
 
-h2{
-    font-family: "HelveticaNeueCyr-Thin", sans-serif;
-    font-size: 360%;
-    line-height: 1.1;
-    color: #3b3b3b;
-    text-align: center;
-    margin-bottom: 30px;
-    
-    @media(max-width: 768px){font-size: 300%;}
-    
-    span{color: @brand-color;}
-}
-
 .show-all{
     background: @brand-color;
     border-radius: 3px;
-    padding: 20px 0;
+    padding: 15px 0;
     color: #ffffff;
     text-align: center;
     font-size: 160%;
     cursor: pointer;
     
-    &:hover{background: #ff5d1e;}
+    &:hover{
+        background: @brand-color + 20%;
+    }
 }
 
+.callback{
+    display: block;
+    padding: 15px 5px;
+    border: none;
+    border-radius: 3px;
+    font-size: 150%;
+    color: #ffffff;
+    vertical-align: top;
+    background: @brand-color;
+    width: 100%;
 
-.how-we-work{
+    &:hover{
+        background-color: @brand-color + 20%;
+        cursor: pointer;
+    }
+
+    span{margin-right: 10px;}
+}
+
+.b-workstep{
     padding: 40px 0;
-    background: #ff4900;
+    background: @brand-color + 25%;
         
     h2{color: #ffffff;}
     
@@ -349,6 +347,10 @@ h2{
             font-size: 160%;
             line-height: 1.3;
             margin: 20px 0; 
+        }
+        
+        img{
+            width: 145px;
         }
     }
 }
@@ -368,7 +370,7 @@ h2{
             
             .sign{
                 display: inline-block;
-                color: black;
+                color: @text-color;
                 border: none;
                 padding: 10px 10px;
                 margin-right: 20px;
@@ -383,6 +385,13 @@ h2{
                 border-radius: 3px;
                 margin: 0 10px 10px 0;
                 cursor: pointer;
+                color: @text-color;
+            }
+            
+            .activ{
+                background: #ff4900;
+                color: #ffffff;
+                border: 1px solid @brand-color;
             }
         }
     }
@@ -390,12 +399,6 @@ h2{
     .models{
         border-top: 1px solid #f5f5f5;
         
-    }
-    
-    .activ{
-        background: #ff4900;
-        color:#fff;
-        border:1px solid @brand-color;
     }
     
     .models-pic{
@@ -422,16 +425,20 @@ h2{
 
 .b-service{
     padding: 40px 0;
-    //background: #F7F7F7;
     
     p{
         text-align: center;
         font-size: 180%;
         line-height: 1.4;
+        
+        @media(max-width: 768px){
+            font-size: 160%;
+            text-align: left;
+        }
     }
     
     .service{
-        margin: 40px 0;
+        margin: 40px 0 0;
         
         .item{
             margin-bottom: 30px;
@@ -454,18 +461,10 @@ h2{
             font-size: 160%;
             }
         }
-        
-        h3{
-            font-size: 250%;
-            font-family: "HelveticaNeueCyr-Light", sans-serif;
-            color: @brand-color;
-            margin-bottom: 5px;
-            
-        }
     }
 }
 
-.problems{
+.b-problems{
     padding: 40px 0;
     background: url('../img/problems_bg.png');
     
@@ -473,13 +472,13 @@ h2{
 }
 
 footer{
-    background: url('../img/footer_bg.jpg') no-repeat;
+    background: url('../img/contacts_bg.jpg') no-repeat;
     padding: 40px 0 50px;
     
     .contacts{
         font-size: 200%;
         line-height: 1.2;
-        color: #696969;
+        color: @text-color + 40%;
         font-family: "HelveticaNeueCyr-Thin", Arial, Helvetica, sans-serif;
         margin-bottom: 25px;
         
@@ -507,24 +506,6 @@ footer{
         &.tel{background: url('../img/phone-icon.png') 10px 50% no-repeat;}
 
         &.name{background: url('../img/name-icon.png') 10px 50% no-repeat;}    
-    }
-
-    .send{
-        display: block;
-        width: 100%;
-        color: #ffffff;
-        background: #FF4900;
-        padding: 15px 0;
-        text-align: center;
-        border: none;
-        border-radius: 3px;
-        font-size: 150%;
-        font-family: "HelveticaNeueCyr-Roman", Arial, Helvetica, sans-serif;
-        font-weight: normal;
-
-            &:hover{background: #ff5d1e;}
-
-            span{margin-right: 10px;}
     }
 }
 
@@ -556,9 +537,7 @@ footer{
     width: auto;
     max-width: 400px;
     z-index: 9999;
-    
 }
-
 
 
 //Extra small devices Phones (<768px)	

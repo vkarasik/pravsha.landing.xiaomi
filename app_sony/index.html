@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Ремонт Sony</title>
+        <link href="css/bootstrap.min.css" rel="stylesheet">
+        <link href="css/main.min.css" rel="stylesheet">
+        <script src="js/jquery-3.2.1.min.js" defer></script>
+        <script src="js/script.js" defer></script>
+        <script src="https://www.gstatic.com/charts/loader.js" defer></script>
+        <script src="js/piechart.js" defer></script>
+
+    </head>
+    <body>
+        <div class="container-fluid">
+            <header class="row">
+                <div class="logo col-xs-12 col-sm-5 col-md-5 col-md-offset-1 col-lg-4 col-lg-offset-2">
+                    <img src="img/logo.png" alt="">
+                </div>
+                <div class="col-xs-12 col-sm-4 col-md-3 col-lg-2">
+                        <a class="phone" href="tel:+375447436278">+375&nbsp;(44)&nbsp;743-62-78</a>
+                    <span class="location">
+                        Минск, ежедневно с 9:00 до 18:00
+                    </span>
+                </div> 
+                <div class="col-xs-12 col-sm-3 col-md-2 col-lg-2">
+                    <button id="callback" type="button" class="callback">
+                        <span class="glyphicon glyphicon-send" aria-hidden="true"></span>
+                        <span>Заказать звонок</span>
+                    </button>
+                </div>   
+            </header>
+            <nav class="row">
+                <ul class="col-xs-12">
+                    <li><a href="#service">О нас</a></li>
+                    <li><a href="#price">Услуги и цены</a></li>
+                    <li><a href="#models">Модели</a></li>
+                    <li><a href="#problems">Частые проблемы</a></li>
+                    <li><a href="#footer">Контакты</a></li>
+                </ul>    
+            </nav>
+            <section class="b-banner row">
+                <div class="col-xs-12 col-md-6 col-md-offset-1 col-lg-5 col-lg-offset-2">
+                    <h1>Cервисный центр по ремонту <span>Sony</span> в&nbsp;Минске</h1>
+                    <p>Наш сервисный центр специализируется на ремонте мобильных телефонов Sony. Сертифицированные специалисты способны выполнить ремонт любой сложности в кратчайшие сроки. Благодаря собственному складу запчастей мы может быстро отремонтировать ваш смартфон, используя только оригинальные запчасти с завода производителя.</p>
+                </div>
+            </section>
+            <section class="b-service row">
+                <a name="service"></a>
+                <div class="col-xs-12 col-md-10 col-md-offset-1 col-lg-8 col-lg-offset-2">
+                    <h2>Нужен надежный сервисный центр?</h2>
+                    <p>Мы гарантируем вам быстрое и качественное выполнение ремонта любой сложности. Наши специалисты способны «вернуть к жизни» даже самый безнадежно сломанный телефон. Если вы уже получили несколько отказов в ремонте смартфона Sony в других сервисах, мы готовы взяться за работу!</p>
+                    <div class="service row">
+                        <div class="item warranty col-xs-12 col-md-6 col-lg-4">
+                            <h3>Официальная гарантия от&nbsp;4-х месяцев</h3>
+                            <p>На выполненную нами работу, установленные запчасти и комплектующие, мы даем гарантию от&nbsp;4&#8209;х месяцев.</p>
+                        </div>
+                        <div class="item spare col-xs-12 col-md-6 col-lg-4">
+                            <h3>Оригинальные запчасти ко&nbsp;всем популярным моделям</h3>
+                            <p>У нас самый большой ассортимент запчастей для телефонов Sony, если какой-то детали не оказалось на нашем складе, мы найдем ее в кратчайшие сроки.</p>
+                        </div>
+                        <div class="item speed col-xs-12 col-md-6 col-lg-4">
+                            <h3>Быстрая диагностика и&nbsp;качественный ремонт</h3>
+                            <p>Мы выполняем диагностику и ремонт телефонов Sony в кратчайшие сроки. Все наши специалисты сертифицированные инженеры, поэтому мы гарантируем высокое качество проведённых работ.</p>
+                        </div>
+                    </div>
+                </div>    
+            </section>
+            <div class="b-models row">
+                <a name="models"></a>
+                <div class="col-xs-12 col-sm-12 col-md-10 col-md-offset-1 col-lg-8 col-lg-offset-2">
+                    <h2>Мы ремонтируем любые модели телефонов <span>Sony</span></h2>
+                    <div class="wrap-filter">
+                        <div class="series-filter">
+                            <p class="sign">Серия:</p>
+                            <span id="xzSer">Xperia Z</span>
+                            <span id="xlSer">Xperia L</span>
+                            <span id="xmSer">Xperia M</span>
+                            <span id="xvSer">Xperia V</span>
+                            <span id="xcSer">Xperia C</span>
+                            <span id="xeSer">Xperia E</span>
+                            <span id="xtSer">Xperia T</span>
+                            <span id="xspSer">Xperia SP</span>
+                            <span id="xxSer">Xperia X</span>
+                        </div>
+                    
+                        <div class="models">
+                           <p class="sign">Модель:</p>
+                        </div>    
+                    </div>
+                    <div class="models-pic">
+                       <div class="model-pic-item">
+                        <img src="img/models/Z-Ultra(C6802).jpg" alt="">
+                        <p>Z Ultra(C6802)</p>
+                    </div>
+                    <div class="model-pic-item">
+                        <img src="img/models/C4-Ultra(E53XX).jpg" alt="">
+                        <p>C4-Ultra(E53XX)</p>
+                    </div>
+                    <div class="model-pic-item">
+                        <img src="img/models/E1(D20XX).jpg" alt="">
+                        <p>E1(D20xx)</p>
+                    </div>
+                    <div class="model-pic-item">
+                        <img src="img/models/XA(F31XX).jpg" alt="">
+                        <p>XA(F31XX)</p>
+                    </div>
+                        
+                    </div>
+                </div>    
+            </div>
+            <section class="b-workstep row">
+                <div class="col-xs-12 col-lg-10 col-lg-offset-1">
+                    <h2>Как мы работаем</h2>
+                    <div class="row">
+                        <div class="step col-xs-12 col-sm-6 col-lg-3">
+                            <img src="img/start.png" alt="">
+                            <p>Оставьте заявку, позвоните или приходите в&nbsp;сервисный центр</p>
+                        </div>
+                        <div class="step col-xs-12 col-sm-6 col-lg-3">
+                            <img src="img/diagnosis.png" alt="">
+                            <p>Мы cделаем бесплатную диагностику, после которой сообщим сроки и&nbsp;цену ремонта</p>
+                        </div>
+                        <div class="step col-xs-12 col-sm-6 col-lg-3">
+                            <img src="img/repair.png" alt="">
+                            <p>С вашего согласия проведем ремонт или замену компонентов</p>
+                        </div>
+                        <div class="step col-xs-12 col-sm-6 col-lg-3">
+                            <img src="img/finish.png" alt="">
+                            <p>Вы забираете готовый аппарат из&nbsp;ремонта</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="b-problems row">
+                <a name="problems"></a>
+                <div class="col-xs-12 col-md-8 col-md-offset-2">
+                    <h2>Частые проблемы с&nbsp;телефонами <span>Sony</span></h2>
+                    <div id="piechart" style="width: 100%; height: 350px;"></div>
+                </div>
+            </section>
+            <section class="b-price row">
+                <a name="price"></a>
+                <div class="col-xs-12 col-md-10 col-md-offset-1 col-lg-8 col-lg-offset-2">
+                    <h2>Цены на услуги (работа&nbsp;+&nbsp;запчасти)</h2>
+                
+                    <div class="price-table"> 
+                        <div class="row tr">
+                            <div class="th col-xs-6">Наименование услуги</div>
+                            <div class="th col-xs-3">Стоимость</div>
+                            <div class="th col-xs-3">Время</div>
+                        </div>
+                        <div class="row tr">
+                            <div class="col-xs-6 td">Замена модуля дисплея/экрана</div>
+                            <div class="col-xs-3 td">от 70 руб.</div>
+                            <div class="col-xs-3 td">1 день</div>
+                        </div>
+                        <div class="row tr">
+                            <div class="col-xs-6 td">Замена стекла дисплея</div>
+                            <div class="col-xs-3 td">от 75 руб.</div>
+                            <div class="col-xs-3 td">до 3 дней</div>
+                        </div>
+                        <div class="row tr">
+                            <div class="col-xs-6 td">Замена тачскрина/сенсорного экрана</div>
+                            <div class="col-xs-3 td">от 35 руб.</div>
+                            <div class="col-xs-3 td">1 день</div>
+                        </div>
+                        <div class="row tr">
+                            <div class="col-xs-6 td">Замена аккумулятора</div>
+                            <div class="col-xs-3 td">от 40 руб.</div>
+                            <div class="col-xs-3 td">от 30 мин.</div>
+                        </div>
+                        <div class="row tr">
+                            <div class="col-xs-6 td">Замена разъема питания</div>
+                            <div class="col-xs-3 td">от 42 руб.</div>
+                            <div class="col-xs-3 td">от 30 мин.</div>
+                        </div>
+                        <div class="row tr">
+                            <div class="col-xs-6 td">Замена разъема наушников</div>
+                            <div class="col-xs-3 td">от 42 руб.</div>
+                            <div class="col-xs-3 td">от 30 мин.</div>
+                        </div>
+                        <div class="row tr">
+                            <div class="col-xs-6 td">Ремонт слухового динамика</div>
+                            <div class="col-xs-3 td">от 35 руб.</div>
+                            <div class="col-xs-3 td">от 30 мин.</div>
+                        </div>
+                        <div class="row tr">
+                            <div class="col-xs-6 td">Замена динамика звонка</div>
+                            <div class="col-xs-3 td">от 35 руб.</div>
+                            <div class="col-xs-3 td">от 30 мин.</div>
+                        </div>
+                        <div class="row tr">
+                            <div class="col-xs-6 td">Замена кнопки включения</div>
+                            <div class="col-xs-3 td">от 40 руб.</div>
+                            <div class="col-xs-3 td">от 30 мин.</div>
+                        </div>
+                        <div class="row tr">
+                            <div class="col-xs-6 td">Замена микрофона</div>
+                            <div class="col-xs-3 td">от 35 руб.</div>
+                            <div class="col-xs-3 td">от 30 мин.</div>
+                        </div>
+                        <div class="row tr">
+                            <div class="col-xs-6 td">Замена/ремонт корпуса</div>
+                            <div class="col-xs-3 td">от 40 руб.</div>
+                            <div class="col-xs-3 td">от 30 мин.</div>
+                        </div>
+                        <div class="row tr">
+                            <div class="col-xs-6 td">Замена камеры фронтальной/основной</div>
+                            <div class="col-xs-3 td">от 40 руб.</div>
+                            <div class="col-xs-3 td">от 2 час.</div>
+                        </div>
+                        <div class="row tr">
+                            <div class="col-xs-6 td">Прошивка</div>
+                            <div class="col-xs-3 td">от 35 руб.</div>
+                            <div class="col-xs-3 td">от 1 час.</div>
+                        </div>
+                        <div class="row tr">
+                            <div class="col-xs-6 td">Восстановление после попадания воды</div>
+                            <div class="col-xs-3 td">от 45 руб.</div>
+                            <div class="col-xs-3 td">от 2 дней.</div>
+                        </div>
+                        <div class="row tr">
+                            <div class="col-xs-6 td">Сохранение данных/контактов</div>
+                            <div class="col-xs-3 td">от 35 руб.</div>
+                            <div class="col-xs-3 td">от 1 час.</div>
+                        </div>
+                        <div class="row tr">
+                            <div class="col-xs-6 td">Замена датчика приближения</div>
+                            <div class="col-xs-3 td">от 32 руб.</div>
+                            <div class="col-xs-3 td">от 2 час.</div>
+                        </div>
+                        <div class="row tr">
+                            <div class="col-xs-6 td">Замена задней крышки</div>
+                            <div class="col-xs-3 td">от 45 руб.</div>
+                            <div class="col-xs-3 td">от 30 мин.</div>
+                        </div>
+                        <div class="row tr">
+                            <div class="col-xs-6 td">Ремонт кнопок громкости</div>
+                            <div class="col-xs-3 td">от 39 руб.</div>
+                            <div class="col-xs-3 td">от 30 мин.</div>
+                        </div>
+                    </div><!-- /table -->
+                      
+                    <div class="show-all">Показать все</div> 
+                    <span class="footnote">* Точная цена и время ремонта зависят от наличия на складе запасных частей. Уточнить точную стоимость и срок ремонты вы можете по телефону +375 44 768-62-63</span>
+                </div>
+            </section>
+            <footer class="row">
+                <a name="footer"></a>
+                <div class="col-xs-12 col-sm-8 col-md-8 col-md-offset-1 col-lg-8 col-lg-offset-2">
+                    <h2>Контактная информация</h2>
+                    <div class="contacts">
+                        <span>Минск, пр-т Независимости&nbsp;40 (вход&nbsp;со&nbsp;двора)</span> 
+                        <span>Режим работы: Пн-Пт с&nbsp;9:00&nbsp;до&nbsp;18:00</span>
+                        <span>Телефон: +375&nbsp;(29)&nbsp;319-18-75</span>
+                    </div>
+                    <form class="form" method="post" action="mail.php">
+                        <input type="text" class="name" name="name" placeholder="Ваше имя" data-placeholder="Ваше имя" required>
+                        <input type="text" class="tel" name="tel" placeholder="Номер телефона" data-placeholder="Номер телефона" required>
+                        <button type="submit" class="callback">
+                            <span class="glyphicon glyphicon-send" aria-hidden="true"></span>
+                            <span class="button-text">Заказать звонок</span>
+                        </button>
+                    </form>
+                </div>
+                <div class="modal-form">
+                <form class="form" method="post" action="mail.php">
+                    <input type="text" class="name" name="name" placeholder="Ваше имя" data-placeholder="Ваше имя" required>
+                    <input type="text" class="tel" name="tel" placeholder="Номер телефона" data-placeholder="Номер телефона" required>  
+                    <button type="submit" class="callback">
+                        <span class="glyphicon glyphicon-send" aria-hidden="true"></span>
+                        <span class="button-text">Заказать звонок</span>
+                    </button>
+                </form>
+            </div>
+            <div class="overlay"></div>
+            </footer>
+            <section class="map">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d4700.7031644080735!2d27.573006722925058!3d53.90772805786791!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xb44c62fa07e7da68!2z0KHQtdGA0LLQuNGB0L3Ri9C5INGG0LXQvdGC0YAg0J_RgNCw0LLRiNCw!5e0!3m2!1sru!2sru!4v1500367234371" width="100%" height="350" frameborder="0" style="border:0" allowfullscreen></iframe> 
+            </section>
+        </div>
+    </body>
+</html>

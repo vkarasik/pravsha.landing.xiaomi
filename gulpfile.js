@@ -42,7 +42,7 @@ gulp.task('browserSync', function() {
       baseDir: 'app'
     },
     
-    tunnel: true,
+    tunnel: false,
     host: 'localhost',
     port: 3000,
     logPrefix: "karasik"  

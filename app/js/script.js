@@ -9,13 +9,14 @@ $(function(){
         buttonText.text(buttonText.text() == 'Показать все' ? 'Скрыть' : 'Показать все');
 
         $($hideCell).slideToggle('slow');
-        })
+    })
         
 }); // Спойлер
 
 $(function(){
     
-    var modelsObj = { //Список брендов-моделей
+    //Список брендов-моделей
+    var modelsObj = {
         xiaomi: {
             mi: {
                 models: ['Mi 4s','Mi 4c','Mi 4i','Mi 4 LTE','Mi 5 Pro','Mi 5 High','Mi 5c','Mi 5s Plus','Mi 5s','Mi Pad 2','Mi Note Pro','Mi Note','Mi 6','Mi Note 2','Mi Max Prime']
@@ -90,43 +91,6 @@ $(function(){
         }
     };
     
-    var mi = [
-        'Mi 4s',
-        'Mi 4c',
-        'Mi 4i',
-        'Mi 4 LTE',
-        'Mi 5 Pro',
-        'Mi 5 High',
-        'Mi 5c',
-        'Mi 5s Plus',
-        'Mi 5s',
-        'Mi Pad 2',
-        'Mi Note Pro',
-        'Mi Note',
-        'Mi 6',
-        'Mi Note 2',
-        'Mi Max Prime'
-    ]; // Модели из серии mi
-    
-    var redmi = ['Redmi 3',
-            'Redmi 3X',
-            'Redmi Pro',
-            'Redmi 3S Pro',
-            'Redmi 4 SE',
-            'Redmi 4 HE',
-            'Redmi 4A',
-            'Redmi 2A',
-            'Redmi 2 Prime',
-            'Redmi Note 2'
-            ]; // Модели из серии redmi
-    
-    var redminote = ['Redmi Note 2 Prime',
-            'Redmi Note 4G Dual SIM',
-            'Redmi Note 4',
-            'Redmi Note 4х'];
-    
-    var hongmi = ['Hongmi 1S 4G','Hongmi 1S 3G'];
-    
     var seriesArr = []; // массив для id серий
     
     $('.series-filter span').each(function(){
@@ -149,7 +113,7 @@ $(function(){
         
         for(i=0; i<modelsArr.length; ++i){
             $('.models').append('<span>' + modelsArr[i] + '</span>').hide();
-            $('.models-pic').append('<div class="model-pic-item"><img src="img/models/' + modelsArr[i] + '.jpg"><p>' + modelsArr[i] + '</p></div>'); 
+            $('.models-pic').append('<div class="model-pic-item"><img src="img/models-' + brand + '/' + modelsArr[i] + '.jpg"><p>' + modelsArr[i] + '</p></div>'); 
         }
         $('.models').slideDown();
         $(this).addClass('activ');
@@ -159,10 +123,10 @@ $(function(){
             $(this).addClass('activ');
             $('.models span').not(this).removeClass('activ');
             $('.models-pic div').remove();
-            $('.models-pic').append('<div class="model-pic-item"><img src="img/models/' + $(this).text() + '.jpg"><p>' + $(this).text() + '</p></div>');
+            $('.models-pic').append('<div class="model-pic-item"><img src="img/models-' + brand + '/' + $(this).text() + '.jpg"><p>' + $(this).text() + '</p></div>');
         })
     })
-}); // Фильтр моделей
+});
 
 $(function(){
     $('.name, .tel').focusin(function(){

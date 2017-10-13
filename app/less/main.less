@@ -101,8 +101,22 @@ p{
     font-weight: normal;
 }
 
+// xiaomi
+@brand: 'xiaomi';
 @brand-color: #ff4900;
 @text-color: #3b3b3b;
+
+/* samsung
+@brand: 'samsung';
+@brand-color: #1a3b84;
+@text-color: #3b3b3b;
+*/
+/* sony
+@brand: 'sony';
+@brand-color: #000000;
+@text-color: #3b3b3b;
+*/
+
 
 body{
     font-size: 62.5%;
@@ -173,7 +187,6 @@ header{
     .location{
         display: block;
         font-size: 140%;
-        //color: #818181;
         color: @text-color + 50%;
         margin-top: 5px;
         text-align: center;
@@ -228,7 +241,7 @@ nav{
     }
 }
 
-.b-banner{
+.b-intro{
     padding: 40px 0 70px;
     background: url('../img/banner_bg.jpg') no-repeat;
     
@@ -293,6 +306,7 @@ nav{
     .footnote{
         display: inline-block;
         font-size: 140%;
+        line-height: 1.3;
         margin: 15px 0;
         padding: 0 10px;
         color: #8d8d8d
@@ -389,7 +403,7 @@ nav{
             }
             
             .activ{
-                background: #ff4900;
+                background: @brand-color;
                 color: #ffffff;
                 border: 1px solid @brand-color;
             }
@@ -445,15 +459,15 @@ nav{
             padding: 0 50px;
             
             &.warranty{
-              background: url('../img/service.png') no-repeat 0 0;  
+                background: url('../img/@{brand}-service.png') no-repeat 0 0;  
             }
             
             &.spare{
-                background: url('../img/warranty.png') no-repeat 0 0;     
+                background: url('../img/@{brand}-warranty.png') no-repeat 0 0;     
             }
             
             &.speed{
-                background: url('../img/speed.png') no-repeat 0 0;    
+                background: url('../img/@{brand}-speed.png') no-repeat 0 0;    
             }
             
             p{

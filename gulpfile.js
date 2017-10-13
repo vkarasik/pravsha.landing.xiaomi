@@ -26,11 +26,12 @@ var path = {
     app: { //Директория для разработки
         html: 'app/template/*.html',
         include: 'app/template/include/*.html',
-        js: 'app/js/**/*.js',
+        js: 'app/js/**/*.*',
         less: 'app/less/*.less',
         css: 'app/css/*.css',
         img: 'app/img/**/*.*',
-        fonts: 'app/fonts/**/*.*'
+        fonts: 'app/fonts/**/*.*',
+        php: 'app/*.php',
     },
     clean: 'dist'
 };
@@ -112,6 +113,19 @@ gulp.task('js', function() {
     .pipe(gulp.dest(path.dist.js))
 });
 
+// копирование php
+gulp.task('php', function() {
+    gulp.src(path.app.php)
+    .pipe(gulp.dest(path.dist.html))
+});
+
+// минификация основного js
+gulp.task('jsmin', function() {
+    gulp.src('app/js/script.js')
+    .pipe(uglify())
+    .pipe(gulp.dest(path.dist.js))
+});
+
 // очистка
 gulp.task('clean', function() {
   del(path.clean);
@@ -129,7 +143,7 @@ gulp.task('watch', function(){
 gulp.task('default', ['browserSync', 'less', 'rigger', 'watch']);
 
 // Сборка проекта
-gulp.task('build', ['cleanCSS', 'imagemin', 'fonts', 'js', 'html']);
+gulp.task('build', ['cleanCSS', 'imagemin', 'fonts', 'js', 'html', 'php']);
 
 
 
